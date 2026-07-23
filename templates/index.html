@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Fake News Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📰 AI-Powered Fake News Detection</h1>
+
+    <p style="text-align:center;color:#64748b;font-size:18px;margin-bottom:25px;">
+        Enter a news article below to predict whether it is <strong>Real</strong> or <strong>Fake</strong> using trained Machine Learning models.
+    </p>
+
+    <form action="/predict" method="POST">
+
+        <textarea
+            name="news"
+            placeholder="Paste the complete news article here..."
+            required></textarea>
+
+        <button type="submit">🔍 Analyze News</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

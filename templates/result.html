@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📰 Prediction Result</h1>
+
+    <div class="card">
+
+        <h3>News Article</h3>
+        <p>{{ news }}</p>
+
+        <h3>Prediction</h3>
+
+        {% if prediction == "Real" %}
+            <span class="real">✔ REAL NEWS</span>
+        {% else %}
+            <span class="fake">✖ FAKE NEWS</span>
+        {% endif %}
+
+        <h3>Confidence</h3>
+        <p><strong>{{ confidence }}%</strong></p>
+
+    </div>
+
+    <a href="{{ url_for('home') }}">
+        <button>🔄 Try Another Article</button>
+    </a>
+
+</div>
+
+</body>
+</html>
